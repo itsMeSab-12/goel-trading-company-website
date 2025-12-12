@@ -1,0 +1,172 @@
+/* Import Tailwind base utilities first */
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+/* -------------------------------
+   Global CSS Reset / Normalize
+---------------------------------*/
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+/* Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset images */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Reset form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Make buttons behave like buttons */
+button {
+  cursor: pointer;
+}
+
+/* Make textareas resizable vertically only */
+textarea {
+  resize: vertical;
+}
+
+/* Set root defaults */
+html,
+body {
+  width: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Inter", sans-serif;
+}
+
+/* Default anchor transitions */
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Global selection color */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+/* Default scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Light Mode */
+:root {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  //--color-background: hsl(35, 45%, 96%);
+  --color-background: #f0ece4;
+  --color-foreground: #24211b;
+  --color-primary: hsl(35, 65%, 35%);
+  --color-primary-foreground: hsl(40, 30%, 96%);
+  --color-secondary: hsl(24, 18%, 16%);
+  --color-secondary-foreground: hsl(24, 30%, 20%);
+  --color-variant: #535048;
+  --color-variant-accent: #878275;
+  --color-variant-dark: #24221c;
+  --color-variant-medium: #545149;
+  --color-variant-light: #e8e0d6;
+  --color-muted: hsl(30, 20%, 92%);
+  --color-muted-foreground: hsl(24, 12%, 36%);
+  --color-muted-foreground2: hsl(35, 61%, 21%);
+}
+
+/* Dark Mode */
+.dark {
+  --color-background: hsl(24, 35%, 8%);
+  --color-foreground: hsl(40, 30%, 96%);
+  --color-primary: hsl(42, 69%, 66%);
+  --color-primary-foreground: hsl(24, 35%, 10%);
+  --color-secondary: hsl(24, 18%, 16%);
+  --color-border: hsl(24, 18%, 22%);
+}
+
+/* Apply tokens */
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Playfair Display", sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+.noise-bg {
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("src/assets/images/noise.png");
+  background-position: 50%;
+  background-size: 31.25rem 31.25rem;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.top-symbol-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-symbol {
+  z-index: 9999;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+}

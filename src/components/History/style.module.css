@@ -1,0 +1,130 @@
+.component_container {
+  height: 100%;
+  width: 100%;
+  max-width: 1600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: var(--primary-secondary);
+}
+
+.placeholder_container {
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff2a;
+  color: var(--primary-secondary);
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.main_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  width: 100%;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.main_title {
+  height: 20%;
+  font-size: 2.5rem;
+  background-color: var(--color-background);
+  z-index: 3;
+  border: 5px double var(--color-primary);
+  padding: 0px 20px;
+}
+
+.items_container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 15px;
+}
+
+.item_wrapper {
+  display: flex;
+  min-height: 100px;
+  width: 100%;
+}
+
+.history_line {
+  position: absolute;
+  left: 85px;
+  /* aligns with dot/index area */
+  top: 0px;
+  /* start below title */
+  width: 3px;
+  height: calc(100%);
+  /* fits main container */
+  background: linear-gradient(var(--color-primary), var(--color-primary));
+  transform-origin: top;
+  z-index: 1;
+}
+
+.item_index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.item_index span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 2rem;
+  aspect-ratio: 1/1;
+  min-width: 75px;
+  border-radius: 8px;
+  z-index: 3;
+}
+
+.content_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 30px;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  width: 100%;
+  color: var(--color-foreground);
+}
+
+.item_title {
+  font-size: 1.5rem;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.item_desc {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.hidden {
+  /* background-color: #242424; */
+  border: 1px solid #ffffff20;
+  color: #ffffff20;
+}
+
+.visible {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: #242424;
+}

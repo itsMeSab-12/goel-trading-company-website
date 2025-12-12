@@ -1,0 +1,50 @@
+.page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  padding: 20px 30px;
+  //max-width: 1400px;
+}
+
+.testimonial-card-wrapper {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-section {
+  height: 100%;
+  grid-area: 1 / 1 / 4 / 4;
+}
+
+.card-section {
+  height: 100%;
+  grid-area: 1 / 4 / 4 / 6;
+}
+
+.about-history-wrapper {
+}
+
+.history-section {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .testimonial-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+  }
+  .testimonial-section,
+  .card-section {
+    width: 100%;
+  }
+}
