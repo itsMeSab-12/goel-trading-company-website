@@ -7,7 +7,7 @@ export default function Layout() {
     <>
       <div className="noise-bg"></div>
       <div className="top-symbol-container">
-        <img src="src/assets/images/om-symbol.png" className="top-symbol"></img>
+        <img src="/assets/images/om-symbol.png" className="top-symbol"></img>
       </div>
       <Navbar />
       <main>
